@@ -113,19 +113,15 @@ public class GestionEstudiantes {
 
                         if (e.getCodigo() == codigoNota) {
 
-                            System.out.print("Ingrese calificacion: ");
-                            double nota = leer.nextDouble();
+System.out.print("Ingrese calificacion: ");
+double nota = leer.nextDouble();
 
-                            if (nota > 20) {
-
-                                System.out.println("Se pasa el limite de nota");
-
-                            } else {
-
-                                e.setCalificacion(nota);
-                                System.out.println("Calificacion registrada.");
-                            }
-
+if (nota < 0 || nota > 20) {
+    System.out.println("La calificacion debe estar entre 0 y 20.");
+} else {
+    e.setCalificacion(nota);
+    System.out.println("Calificacion registrada.");
+}
                             encontradoNota = true;
                             break;
                         }
