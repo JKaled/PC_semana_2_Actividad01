@@ -4,7 +4,7 @@ package PC_01;
 public class Estudiante {
 
     private int codigo;
-    private String nombre;
+    private String nombreEstudiante;
     private double calificacion;
     
    
