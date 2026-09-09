@@ -1,4 +1,4 @@
-package proyecto_grupal1;
+package PC_01;
 
 
 public class Estudiante {
@@ -45,4 +45,12 @@ public class Estudiante {
     public void setCalificacion(double calificacion) {
         this.calificacion = calificacion;
     }
+    @Override
+    public String toString() {
+    return "Estudiante{" +
+            "codigo=" + codigo +
+            ", nombre='" + nombre + '\'' +
+            ", calificacion=" + calificacion +
+            '}';
+}
 }
