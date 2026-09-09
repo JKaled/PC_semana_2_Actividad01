@@ -4,7 +4,7 @@ package PC_01;
 public class Estudiante {
 
     private int codigo;
-    private String nombreEstudiante;
+    private String nombre;
     private double calificacion;
     
    
@@ -45,4 +45,12 @@ public class Estudiante {
     public void setCalificacion(double calificacion) {
         this.calificacion = calificacion;
     }
+    @Override
+    public String toString() {
+    return "Estudiante{" +
+            "codigo=" + codigo +
+            ", nombre='" + nombre + '\'' +
+            ", calificacion=" + calificacion +
+            '}';
+}
 }
