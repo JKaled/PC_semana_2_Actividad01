@@ -29,8 +29,13 @@ public class GestionEstudiantes {
                               // OPCION 1: REGISTRAR ESTUDIANTE
                 case 1:
 
-                    System.out.print("Ingrese codigo: ");
+                    System.out.print("Ingrese codigo de 4 digitos: ");
                     int codigo = leer.nextInt();
+                    
+                    if (codigo < 1000 || codigo > 9999 ){
+                        System.out.println("el codigo debe tener exactamente 4 digitos. ");
+                                break;
+                                }
 
                     boolean codigoExiste = false;
 
@@ -113,15 +118,17 @@ public class GestionEstudiantes {
 
                         if (e.getCodigo() == codigoNota) {
 
-System.out.print("Ingrese calificacion: ");
-double nota = leer.nextDouble();
+                        System.out.print("Ingrese calificacion: ");
+                        double nota = leer.nextDouble();
 
-if (nota < 0 || nota > 20) {
-    System.out.println("La calificacion debe estar entre 0 y 20.");
-} else {
-    e.setCalificacion(nota);
-    System.out.println("Calificacion registrada.");
-}
+                        //verificacion que la nota sea menor de 20
+                        if (nota < 0 || nota > 20) {
+                        System.out.println("La calificacion debe estar entre 0 y 20.");
+                            } else {
+                        e.setCalificacion(nota);
+                             System.out.println("Calificacion registrada.");
+                               }
+                        
                             encontradoNota = true;
                             break;
                         }
