@@ -147,16 +147,25 @@ public class GestionEstudiantes {
                         System.out.println("No hay estudiantes registrados.");
 
                     } else {
-
                         double suma = 0;
+                        int cantidadCalificados = 0;
+                        
 
                         for (Estudiante e : estudiantes) {
+                            
+                            if(e.getCalificacion()>0){
                             suma += e.getCalificacion();
+                            cantidadCalificados++;
                         }
-
+                    }
+                        if (cantidadCalificados == 0){
+                            System.out.println("No hay calificaciones registradas. ");
+                        } else { 
+                            
                         double promedio = suma / estudiantes.size();
 
                         System.out.println("Promedio: " + promedio);
+                        }
                     }
 
                     break;
